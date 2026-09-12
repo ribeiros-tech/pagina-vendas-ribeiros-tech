@@ -153,12 +153,21 @@
     });
   }
 
-  // Plan buttons → scroll to checkout
-  document.querySelectorAll('.plano__cta[data-plan]').forEach(btn => {
-    btn.addEventListener('click', e => {
+   // ========================================
+  // CHECKOUT — PREPARADO PARA CAKTO
+  // ========================================
+  const CHECKOUT_URL = '#';
+
+  const checkoutBtn = document.getElementById('checkoutBtn');
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', e => {
       e.preventDefault();
-      scrollTo('#contratar');
+      if (CHECKOUT_URL !== '#') {
+        window.open(CHECKOUT_URL, '_blank', 'noopener,noreferrer');
+      } else {
+        scrollTo('#planos');
+      }
     });
-  });
+  }
 
 })();
