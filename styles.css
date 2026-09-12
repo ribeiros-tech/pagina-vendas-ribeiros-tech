@@ -131,14 +131,13 @@ button { background: none; border: none; cursor: pointer; font-family: inherit; 
    ANIMATIONS
    ========================================= */
 [data-animate] {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity .65s var(--ease), transform .65s var(--ease);
+  opacity: 1;
+  transform: none;
 }
 
 [data-animate].is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
